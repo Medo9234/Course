@@ -1,0 +1,90 @@
+﻿
+@model StuDepViewModel
+@{
+    Layout = null;
+}
+@{
+    // int Id = 1;
+    // string Name = "7ODa";
+    // int Age = 21;
+    // int Degree = 90;
+    // string[] Friends = { "Ahmed", "Ali", "Abdo", "Ghada", "Sama" };
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Display</title>
+</head>
+<body>
+    @* <h1>
+        @Model.Student.Id <br /> @Model.Student.Name <br /> @Model.Student.Age <br /> @Model.Student.Degree
+        <hr />
+        @Model.Department.Dept_Id <br /> @Model.Department.Dept_Name
+        <hr />
+    </h1>
+
+    @* <h1>
+        @ViewBag.std1.Id : @ViewBag.std1.Name : @ViewBag.std1.Age : @ViewBag.std1.Degree
+    </h1> *@
+
+
+    @* <ul>
+        @foreach(var item in Friends)
+        {
+            <li><h2>@item</h2></li>;
+        }
+        
+    </ul> *@
+    
+
+   @*  <ul>
+        @foreach (var item in (ViewData["Friends"] as string[]))
+        {
+            <li><h2>@item</h2></li>
+            ;
+        }
+
+    </ul> *@
+
+
+    @* <ul>
+        @foreach (var item in (ViewBag.Friends))
+        {
+            <li><h2>@item</h2></li>
+            ;
+        }
+
+    </ul> *@
+
+
+    @* @if(ViewBag.Degree>=60)
+    {
+        <h2>Pass</h2>
+    }
+    else
+    {
+        <h2>Fail</h2>
+    } *@
+
+    @* @if ((int)(ViewData["Degree"]) >= 60)
+    {
+        <h2>Pass</h2>
+    }
+    else
+    {
+        <h2>Fail</h2>
+    } *@
+
+
+    @* <h1>@ViewBag.Fname</h1>
+    <h1>@(1+1)</h1>
+
+
+    <h1 style="font-family:'Gill Sans MT';">
+        Hi, My name's is 7ODa_Sa33d
+    </h1> *@ 
+</body>
+</html>

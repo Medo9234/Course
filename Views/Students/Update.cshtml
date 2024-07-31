@@ -1,0 +1,61 @@
+﻿@model Student
+@{
+
+    ViewBag.Title = "Update Student";
+}
+
+
+
+
+    <div class="container">
+    <form method="post">
+        <h1 class="alert text-center">Update Student</h1>
+        <div class="form-group">
+            <label asp-for="Name"></label>
+                <input class="input form-control" asp-for="Name" placeholder="Enter name">
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Age"></label>
+                <input class="input form-control" asp-for="Age" placeholder="Enter age">
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Degree"></label>
+                <input class="input form-control" asp-for="Degree" placeholder="Enter degree">
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input class="input form-control" asp-for="Email" placeholder="Enter your Email">
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input class="input form-control" asp-for="Password" placeholder="Enter Password">
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="CPassword"></label>
+            <input class="input form-control" asp-for="CPassword" placeholder="Enter Password">
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Dept_Num"></label>
+            <select asp-for="Dept_Num" asp-items="ViewBag.Dept_Num">
+               
+            </select>
+        </div>
+        <br />
+
+            <button type="submit" class="btn">👉🏻 Edit 👈🏻</button>
+    </form>
+    <a type="submit" class="btn" href="/students/index">👉🏻 Back 👈🏻</a>
+
+</div>
+
+
+@section Styles_Update{
+    <link href="~/css/update.css" rel="stylesheet" />
+}
+

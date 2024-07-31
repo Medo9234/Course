@@ -1,0 +1,66 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Create Student";
+}
+
+
+    <div class="container">
+       
+        <form method="post">
+            <h1 class="alert text-center">Adding Student</h1>
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input class="form-control" asp-for="Name" placeholder="Enter Your name">
+                <span asp-validation-for="Name"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Age"></label>
+            <input id="AgeInput" class="form-control" asp-for="Age" placeholder="Enter Your age">
+                <span asp-validation-for="Age"></span>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="Degree"></label>
+            <input id="DegreeInput" class="form-control" asp-for="Degree" placeholder="Enter Your degree">
+                <span asp-validation-for="Degree"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+            <input class="form-control" asp-for="Email" placeholder="Enter Your Email">
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+            <input id="Validing" onkeyup="CheckPassword(this)" class="form-control" asp-for="Password" placeholder="Enter Your Password">
+            <span class="text-danger" id="password-validation-error" asp-validation-for="Password"></span>
+            
+            </div>
+            <div class="form-group">
+                <label asp-for="CPassword"></label>
+                <input class="form-control" asp-for="CPassword" placeholder="Confirm Password">
+                <span asp-validation-for="CPassword"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Dept_Num"></label>
+                <select asp-for="Dept_Num" asp-items="ViewBag.Depts"></select>
+            
+            </div>
+            <br />
+            <button type="submit" class="btn">👉🏻 Add 👈🏻</button>
+        </form>
+    </div>
+
+    @section Scripts{
+               <script src="~/js/site.js"></script>
+               <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+               <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    }
+
+
+
+@section Styles_Create{
+    <link href="~/css/create.css" rel="stylesheet" />
+}
+

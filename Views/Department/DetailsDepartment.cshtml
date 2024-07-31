@@ -1,0 +1,22 @@
+﻿@model Department
+@{
+    ViewBag.Title2 = "Details Department";
+}
+
+
+    <section class="container">
+        <form>
+            <p class="alert">
+                <b>ID👉</b>@Model.Dept_Id<br />
+                <b>Name👉</b>@Model.Dept_Name<br />
+                <b>Description👉</b>@Model.Dept_Description<br />
+
+            </p>
+        <a class="btn" href="/department/indexdepartment">👈 Back</a>
+        </form>
+    </section>
+
+
+@section Styles_DetailsDept{
+    <link href="~/css/Details.css" rel="stylesheet" />
+    }

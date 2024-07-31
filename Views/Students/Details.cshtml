@@ -1,0 +1,22 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Student_Details";
+}
+
+    <section class="container">
+        <form>
+            <p class="alert">
+                <b>Name👉</b>@Model.Name<br />
+                <b>Age👉</b>@Model.Age<br />
+                <b>Degree👉</b>@Model.Degree<br />
+                <b>Department👉</b>@Model.Department.Dept_Name<br />
+                <b>Email👉</b>@Model.Email<br />
+            </p>
+        <a class="btn" href="/students/index">👈 Back</a>
+        </form>
+    </section>
+
+
+@section Styles_Details{
+    <link href="~/css/details.css" rel="stylesheet" />
+}

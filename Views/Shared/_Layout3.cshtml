@@ -1,0 +1,120 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title2</title>
+    <link href="~/css/footer-2.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+
+    <!-- Start Header -->
+    <header>
+        <div class="Main">
+            <a href="#" class="logo">7ODa</a>
+
+            <div class="links">
+                <a asp-action="index" asp-controller="students">Students</a>
+                <a asp-action ="indexdepartment" asp-controller="department">Departments</a>
+                <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <!-- </nav> -->
+        </div>
+    </header>
+    <!-- End Header -->
+    <br />
+
+    @RenderBody()
+
+    <br />
+
+
+    <!-- Footer Start -->
+    <div class="footer">
+
+        <div class="Container">
+            <div class="footer-contact">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <a style="text-decoration-line: none;" href="tel:+201092346152">
+                            <div>
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+201092346152</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a style="text-decoration-line: none;" href="mailto:medosaeed914519277@gmail.com">
+                            <div>
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>medosaeed914519277@gmail.com</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Contact Me</h4>
+                        <a href="https://twitter.com/MedoSae40223900"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100015609369393"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/Medo9234"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/ma7moudsa33d9234/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/medo-saeed-634554270/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="Container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copy-text">
+                            <p style="color:#000;"> &copy; <a href="/students/index">Students</a> Rights by <b><em>7ODa</em></b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="copy-menu">
+                            <a href="/students/create">Create</a>
+                            <a href="/home/privacy">Privacy</a>
+                            <a href="">7ODa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+ 
+
+
+    @RenderSection("Styles_IndexDept",false)
+    @RenderSection("Styles_DetailsDept",false)
+    @RenderSection("Styles_CreateDept",false)
+    @RenderSection("Styles_UpdateDept",false)
+
+
+
+</body>
+</html>

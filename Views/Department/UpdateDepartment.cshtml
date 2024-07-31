@@ -1,0 +1,35 @@
+﻿@model Department
+@{
+    ViewBag.Title2 = "Update Department";
+}
+
+
+
+    <div class="container">
+        <form method="post">
+            <h1 class="alert text-center">Update Student</h1>
+
+            <br />
+            <div class="form-group">
+                <label asp-for="Dept_Name"></label>
+                <input class="input form-control" asp-for="Dept_Name" placeholder="Enter Name">
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Dept_Description"></label>
+                <input class="input form-control" asp-for="Dept_Description" placeholder="Enter Description">
+            </div>
+            <br />
+
+
+        <button type="submit" class="btn">👉🏻 Edit 👈</button>
+        </form>
+    <a type="submit" class="btn" href="/department/indexdepartment">👈 Back</a>
+
+    </div>
+
+
+
+@section Styles_UpdateDept{
+    <link href="~/css/Update.css" rel="stylesheet" />
+    }

@@ -1,0 +1,35 @@
+﻿@model Department
+@{
+    ViewBag.Title2 = "Create Department";
+}
+
+
+
+
+    <h2>Create Department</h2>
+
+
+    <form method="post">
+        
+
+        <div class="form-group">
+            <label asp-for="Dept_Name"></label>
+            <input class="form-control" asp-for="Dept_Name" placeholder="Enter Name">
+            <span asp-validation-for="Dept_Name"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="Dept_Description"></label>
+            <input class="form-control" asp-for="Dept_Description" placeholder="Enter Description">
+            <span asp-validation-for="Dept_Description"></span>
+        </div>
+
+    <button type="submit" class="btn">👉🏻 Add 👈</button>
+            
+        </form>
+
+
+@section Styles_CreateDept{
+    <link href="~/css/Create.css" rel="stylesheet" />
+}

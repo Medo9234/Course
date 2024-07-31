@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Department>
+@{
+    ViewBag.Title2 = "Departments";
+}
+
+
+
+    <section class="container">
+        <div id="TBL">
+            <a asp-action="CreateDepartment" asp-controller="department" id="Hlink" target="_blank" class="btn">
+                Add More ++
+                <span class="badge bg-black">@Model.Count()</span>
+            </a>
+            <table id="TBL" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Operations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="Row1">@item.Dept_Id</td>
+                            <td>@item.Dept_Name</td>
+                            <td>@item.Dept_Description</td>
+
+                            <td>
+                                <div class="btn-group">
+                                    <a asp-action="detailsdepartment" asp-controller="Department" asp-route-id="@item.Dept_Id" class="btn btn-primary">
+                                    Details👉
+                                    </a>
+                                    <a asp-action="delete" asp-controller="Department" asp-route-id="@item.Dept_Id" class="btn btn-danger" onclick="return confirm('Are you sure?')">
+                                    Delete🚫
+                                    </a>
+                                    <a asp-action="updatedepartment" asp-controller="Department" asp-route-id="@item.Dept_Id" class="btn btn-success">
+                                    Update👉
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+               
+            </table>
+        <a style="float: left;margin: 1.5rem;" asp-action="index" asp-controller="students" class="btn" id="Hlink">
+            👈 Back
+        </a>
+    </div>
+    </section>
+
+
+
+
+@section Styles_IndexDept{
+
+    <link href="~/css/IndexDept.css" rel="stylesheet" />
+    }
+
